@@ -1,0 +1,36 @@
+version: "3.5"
+services:
+  php:
+    build:
+      args:
+        user: foster
+        uid: 1000
+      context: .
+      dockerfile: /var/www/laravel/etc/Dockerfile
+    image: laravel
+    container_name: laravel_php
+    restart: unless-stopped
+    working_dir: /
+    volumes: 
+      - /var/www/laravel/htdocs:/var/www
+
+  db: 
+    image: mysql:5.7
+    container_name: laravel_db
+    restart: unless-stopped
+    environment: 
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      SERVICE_NAME: mysql
+    volumes:
+      - /var/www/laravel/mysql:/docker-entrypoint-initdb.d
+
+  nginx:
+    image: nginx:1.21.1-alpine
+    container_name: laravel_nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - /var/www/laravel/htdocs:/var/www
+      - /var/www/laravel/etc/nginx:/etc/nginx/conf.d

@@ -1,0 +1,22 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-select/dist/css/bootstrap-select.css';
+@import '~bootstrap-datepicker/dist/css/bootstrap-datepicker.css';
+@import '~datatables.net-bs4/css/dataTables.bootstrap4.css';
+@import '~admin-lte/dist/css/adminlte.css';
+
+.dropdown-menu .status {
+    padding: 10px 10px 0 10px;
+}
