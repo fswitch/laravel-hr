@@ -64,7 +64,7 @@ docker exec -ti laravel_php /bin/bash
 :/var/www$ php artisan migrate
 ```
 
-To post fake data to DB you shoul look at database/factories and database/seeders
+To post fake data to DB you should look at database/factories and database/seeders
 
 Add positions first: `:/var/www$ php artisan db:seed --class=PositionSeeder`
 Then you can populate DB with employees: `:/var/www$ php artisan db:seed --class=EmployeeSeeder`
