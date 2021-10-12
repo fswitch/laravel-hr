@@ -98,7 +98,7 @@
                             <select id="position_select" name="position_id" class="selectpicker" data-live-search="true">
 
                             </select>
-                            @error('position')
+                            @error('position_id')
                             <div class="text-danger p-2">
                                 {{ $message }}
                             </div>
@@ -189,7 +189,7 @@ $(function () {
             }
         });
 
-    @if (old('position')>0 || $edit>0)
+    @if (old('position_id')>0 || $edit>0)
     $.ajax({
         url: '{{route('position.find')}}',
         type:'POST',
@@ -197,7 +197,7 @@ $(function () {
         data: {
             "_token": "{{ csrf_token() }}",
             find: '',
-            id: '{{ old('position',$employee->position_id) }}'
+            id: '{{ old('position_id',$employee->position_id) }}'
          }
     })
     .done(function(res){
