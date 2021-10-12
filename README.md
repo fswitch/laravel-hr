@@ -12,7 +12,7 @@ echo "etc/*" > .git/info/sparse-checkout
 git checkout
 ```
 
-Check etc/docker-compose.yml for the correct user name and uid.
+Check etc/docker-compose.yml for the **correct user name and uid**.
 Check MySQL parameters in htdocs/.env
 Copy htdocs/.env to etc/.env
 
