@@ -62,6 +62,7 @@ git pull
 docker exec -ti laravel_php /bin/bash
 :/var/www$ cd /var/www
 :/var/www$ php artisan migrate
+:/var/www$ npm run dev
 ```
 
 To post fake data to DB you should look at database/factories and database/seeders
