@@ -87,11 +87,11 @@
               </p>
             </a>
           </li>
-          <li class="nav-item
-          @if (Route::is('employee*'))
-           active
-          @endif">
-            <a href="{{ route('employees.index') }}" class="nav-link">
+          <li class="nav-item">
+            <a href="{{ route('employees.index') }}" class="nav-link
+            @if (Route::is('employee*'))
+             active
+            @endif">
               <p>
                 Employees
               </p>
