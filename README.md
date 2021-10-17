@@ -54,6 +54,8 @@ docker exec -ti laravel_php /bin/bash
 :/var/www$ cp vendor/torann/geoip/config/geoip.php config/geoip.php
 ```
 
+Set `'cache_tags' => null,` in config/geoip.php
+
 ### After that you can pull the code and migrate DB.
 
 ```
