@@ -51,6 +51,7 @@ docker exec -ti laravel_php /bin/bash
 :/var/www$ composer require jamesmills/laravel-timezone
 :/var/www$ cp vendor/jamesmills/laravel-timezone/src/database/migrations/add_timezone_column_to_users_table.php.stub database/migrations/`date +%Y_%m_%d_%H%M%S`_add_timezone_column_to_users_table.php
 :/var/www$ cp vendor/jamesmills/laravel-timezone/src/config/timezone.php config/timezone.php
+:/var/www$ cp vendor/torann/geoip/config/geoip.php config/geoip.php
 ```
 
 ### After that you can pull the code and migrate DB.
